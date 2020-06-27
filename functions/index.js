@@ -8,20 +8,20 @@ var uuid4 = require('uuid4');
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://hotel-mgmt-sls.firebaseio.com"
+    databaseURL: process.env.databaseURL
 });
 
 const db = admin.firestore();
 
 const config = {
-    apiKey: "AIzaSyDI9jvxBa3i14TmyrPgMvTj_P6Db2b0SO8",
-    authDomain: "hotel-mgmt-sls.firebaseapp.com",
-    databaseURL: "https://hotel-mgmt-sls.firebaseio.com",
-    projectId: "hotel-mgmt-sls",
-    storageBucket: "hotel-mgmt-sls.appspot.com",
-    messagingSenderId: "736587794294",
-    appId: "1:736587794294:web:45b0df5ceb2df9c59d5c57",
-    measurementId: "G-78BKL4B9VK"
+    apiKey: process.env.apiKey,
+    authDomain: process.env.authDomain,
+    databaseURL: process.env.databaseURL,
+    projectId: process.env.projectId,
+    storageBucket: process.env.storageBucket,
+    messagingSenderId: process.env.messagingSenderId,
+    appId: process.env.appId,
+    measurementId: process.env.measurementId
 };
 
 
